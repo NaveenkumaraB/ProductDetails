@@ -34,9 +34,9 @@ public class ProductController {
 	}
 
 	@GetMapping(value = "products", produces = MediaType.APPLICATION_JSON_VALUE)
-	public List getProducts() {
+	public List<Product> getProducts() {
 		Iterable<Product> result = productDao.findAll();
-		return (List) result;
+		return (List<Product>) result;
 	}
 	
 	@GetMapping(value = "product/{id}")
